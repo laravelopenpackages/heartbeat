@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — unreleased
+## 1.0.0 — 2026-10-29
 
 - `Heartbeat::touch()` for everyone or one user; `Heartbeat::watch()` for time-based topics.
 - `GET /heartbeat?since=&topics=` endpoint answering `{ now, changed, interval }`.
