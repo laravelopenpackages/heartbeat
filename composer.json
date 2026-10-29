@@ -1,0 +1,58 @@
+{
+    "name": "laravelopenpackages/heartbeat",
+    "description": "One tiny poll tells every open page what changed — live-feeling Laravel apps without WebSockets.",
+    "keywords": ["laravel", "polling", "realtime", "live-updates", "heartbeat", "notifications"],
+    "homepage": "https://github.com/laravelopenpackages/heartbeat",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Zeeshan Ali"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/routing": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/validation": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "illuminate/database": "^11.0|^12.0|^13.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "suggest": {
+        "illuminate/database": "For the BeatsOnChange model trait (any Laravel app already has it)."
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelOpenPackages\\Heartbeat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelOpenPackages\\Heartbeat\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelOpenPackages\\Heartbeat\\HeartbeatServiceProvider"
+            ],
+            "aliases": {
+                "Heartbeat": "LaravelOpenPackages\\Heartbeat\\Facades\\Heartbeat"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
